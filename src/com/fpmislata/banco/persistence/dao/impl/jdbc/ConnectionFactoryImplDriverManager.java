@@ -13,7 +13,7 @@ public class ConnectionFactoryImplDriverManager implements ConnectionFactory {
     public ConnectionFactoryImplDriverManager() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/banco", "banco", "banco");
+            this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/banco", "root", "srmx50_no10");
         } catch (Exception ex) {
             throw new RuntimeException(ex);
         }
