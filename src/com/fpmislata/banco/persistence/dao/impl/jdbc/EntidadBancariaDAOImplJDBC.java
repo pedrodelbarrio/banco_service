@@ -15,7 +15,7 @@ public class EntidadBancariaDAOImplJDBC implements EntidadBancariaDAO {
     private ConnectionFactory connectionFactory;
 
     public EntidadBancariaDAOImplJDBC() {
-        this.connectionFactory = new ConnectionFactoryImplDriverManager();
+        this.connectionFactory = new ConnectionFactoryImplDataSource();
     }
 
     @Override
