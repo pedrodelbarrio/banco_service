@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class EntidadBancariaDAOImplJDBC implements EntidadBancariaDAO {
 
-    private ConnectionFactory connectionFactory;
+    private final ConnectionFactory connectionFactory;
 
     public EntidadBancariaDAOImplJDBC() {
         this.connectionFactory = new ConnectionFactoryImplDataSource();
@@ -171,6 +171,8 @@ public class EntidadBancariaDAOImplJDBC implements EntidadBancariaDAO {
                 entidadesBancarias.add(entidadBancaria);
             }
 
+            preparedStatement.close();
+            this.connectionFactory.closeConnection(connection);
             return entidadesBancarias;
         } catch (Exception ex) {
             throw new RuntimeException(ex);
@@ -198,6 +200,8 @@ public class EntidadBancariaDAOImplJDBC implements EntidadBancariaDAO {
                 entidadesBancarias.add(entidadBancaria);
             }
 
+            preparedStatement.close();
+            this.connectionFactory.closeConnection(connection);
             return entidadesBancarias;
         } catch (Exception ex) {
             throw new RuntimeException(ex);
