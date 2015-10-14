@@ -5,6 +5,7 @@ import com.fpmislata.banco.persistence.dao.EntidadBancariaDAO;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  *
@@ -12,11 +13,8 @@ import java.util.List;
  */
 public class EntidadBancariaDAOImplJDBC implements EntidadBancariaDAO {
 
-    private final ConnectionFactory connectionFactory;
-
-    public EntidadBancariaDAOImplJDBC() {
-        this.connectionFactory = new ConnectionFactoryImplDataSource();
-    }
+    @Autowired
+    private ConnectionFactory connectionFactory;
 
     @Override
     public EntidadBancaria get(int idEntidadBancaria) {

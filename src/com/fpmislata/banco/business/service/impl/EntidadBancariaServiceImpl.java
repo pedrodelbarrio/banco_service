@@ -3,8 +3,8 @@ package com.fpmislata.banco.business.service.impl;
 import com.fpmislata.banco.business.domain.EntidadBancaria;
 import com.fpmislata.banco.business.service.EntidadBancariaService;
 import com.fpmislata.banco.persistence.dao.EntidadBancariaDAO;
-import com.fpmislata.banco.persistence.dao.impl.jdbc.EntidadBancariaDAOImplJDBC;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  *
@@ -12,11 +12,8 @@ import java.util.List;
  */
 public class EntidadBancariaServiceImpl implements EntidadBancariaService {
 
-    private final EntidadBancariaDAO entidadBancariaDAO;
-
-    public EntidadBancariaServiceImpl() {
-        this.entidadBancariaDAO = new EntidadBancariaDAOImplJDBC();
-    }
+    @Autowired
+    private EntidadBancariaDAO entidadBancariaDAO;
 
     @Override
     public EntidadBancaria get(int id) {
