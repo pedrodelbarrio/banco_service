@@ -1,4 +1,4 @@
-package com.fpmislata.banco.persistence.dao.impl.jdbc;
+package com.fpmislata.banco_service.persistence.dao.impl.jdbc;
 
 import java.sql.*;
 
@@ -13,7 +13,7 @@ public class ConnectionFactoryImplDriverManager implements ConnectionFactory {
     public ConnectionFactoryImplDriverManager() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/banco", "banco", "banco");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/banco", "banco", "banco");
         } catch (Exception ex) {
             throw new RuntimeException(ex);
         }
@@ -21,7 +21,7 @@ public class ConnectionFactoryImplDriverManager implements ConnectionFactory {
 
     @Override
     public Connection getConnection() {
-        return this.connection;
+        return connection;
     }
 
     @Override

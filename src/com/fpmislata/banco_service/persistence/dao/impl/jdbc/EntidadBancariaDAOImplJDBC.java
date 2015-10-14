@@ -1,7 +1,7 @@
-package com.fpmislata.banco.persistence.dao.impl.jdbc;
+package com.fpmislata.banco_service.persistence.dao.impl.jdbc;
 
-import com.fpmislata.banco.business.domain.EntidadBancaria;
-import com.fpmislata.banco.persistence.dao.EntidadBancariaDAO;
+import com.fpmislata.banco_service.business.domain.EntidadBancaria;
+import com.fpmislata.banco_service.persistence.dao.EntidadBancariaDAO;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -44,7 +44,7 @@ public class EntidadBancariaDAOImplJDBC implements EntidadBancariaDAO {
             }
 
             preparedStatement.close();
-            this.connectionFactory.closeConnection(connection);
+            connectionFactory.closeConnection(connection);
             return entidadBancaria;
         } catch (Exception ex) {
             throw new RuntimeException(ex);
@@ -83,7 +83,7 @@ public class EntidadBancariaDAOImplJDBC implements EntidadBancariaDAO {
             }
 
             preparedStatement.close();
-            this.connectionFactory.closeConnection(connection);
+            connectionFactory.closeConnection(connection);
             return entidadBancariaInsertada;
         } catch (Exception ex) {
             throw new RuntimeException(ex);
@@ -116,7 +116,7 @@ public class EntidadBancariaDAOImplJDBC implements EntidadBancariaDAO {
             }
 
             preparedStatement.close();
-            this.connectionFactory.closeConnection(connection);
+            connectionFactory.closeConnection(connection);
             return entidadBancariaActualizada;
         } catch (Exception ex) {
             throw new RuntimeException(ex);
@@ -133,7 +133,7 @@ public class EntidadBancariaDAOImplJDBC implements EntidadBancariaDAO {
             int numFilasBorradas = preparedStatement.executeUpdate();
 
             preparedStatement.close();
-            this.connectionFactory.closeConnection(connection);
+            connectionFactory.closeConnection(connection);
 
             if (numFilasBorradas == 0) {
                 return false;
@@ -170,7 +170,7 @@ public class EntidadBancariaDAOImplJDBC implements EntidadBancariaDAO {
             }
 
             preparedStatement.close();
-            this.connectionFactory.closeConnection(connection);
+            connectionFactory.closeConnection(connection);
             return entidadesBancarias;
         } catch (Exception ex) {
             throw new RuntimeException(ex);
@@ -199,7 +199,7 @@ public class EntidadBancariaDAOImplJDBC implements EntidadBancariaDAO {
             }
 
             preparedStatement.close();
-            this.connectionFactory.closeConnection(connection);
+            connectionFactory.closeConnection(connection);
             return entidadesBancarias;
         } catch (Exception ex) {
             throw new RuntimeException(ex);

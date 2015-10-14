@@ -9,8 +9,8 @@
   
     <context:annotation-config/>
   
-    <bean class="com.fpmislata.banco.persistence.dao.impl.jdbc.ConnectionFactoryImplDriverManager" />
-    <bean class="com.fpmislata.banco.persistence.dao.impl.jdbc.EntidadBancariaDAOImplJDBC" />
-    <bean class="com.fpmislata.banco.business.service.impl.EntidadBancariaServiceImpl" />
+    <bean class="com.fpmislata.banco_service.persistence.dao.impl.jdbc.ConnectionFactoryImplDriverManager" />
+    <bean class="com.fpmislata.banco_service.persistence.dao.impl.jdbc.EntidadBancariaDAOImplJDBC" />
+    <bean class="com.fpmislata.banco_service.business.service.impl.EntidadBancariaServiceImpl" />
  
 </beans>

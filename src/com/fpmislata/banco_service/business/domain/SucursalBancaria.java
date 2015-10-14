@@ -1,4 +1,4 @@
-package com.fpmislata.banco.business.domain;
+package com.fpmislata.banco_service.business.domain;
 
 /**
  *

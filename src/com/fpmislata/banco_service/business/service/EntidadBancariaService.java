@@ -1,6 +1,6 @@
-package com.fpmislata.banco.business.service;
+package com.fpmislata.banco_service.business.service;
 
-import com.fpmislata.banco.business.domain.EntidadBancaria;
+import com.fpmislata.banco_service.business.domain.EntidadBancaria;
 import java.util.List;
 
 /**

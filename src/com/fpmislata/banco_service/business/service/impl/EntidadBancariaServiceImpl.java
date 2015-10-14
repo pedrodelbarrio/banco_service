@@ -1,8 +1,8 @@
-package com.fpmislata.banco.business.service.impl;
+package com.fpmislata.banco_service.business.service.impl;
 
-import com.fpmislata.banco.business.domain.EntidadBancaria;
-import com.fpmislata.banco.business.service.EntidadBancariaService;
-import com.fpmislata.banco.persistence.dao.EntidadBancariaDAO;
+import com.fpmislata.banco_service.business.domain.EntidadBancaria;
+import com.fpmislata.banco_service.business.service.EntidadBancariaService;
+import com.fpmislata.banco_service.persistence.dao.EntidadBancariaDAO;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -17,32 +17,32 @@ public class EntidadBancariaServiceImpl implements EntidadBancariaService {
 
     @Override
     public EntidadBancaria get(int id) {
-        return this.entidadBancariaDAO.get(id);
+        return entidadBancariaDAO.get(id);
     }
 
     @Override
     public EntidadBancaria insert(EntidadBancaria entidadBancaria) {
-        return this.entidadBancariaDAO.insert(entidadBancaria);
+        return entidadBancariaDAO.insert(entidadBancaria);
     }
 
     @Override
     public EntidadBancaria update(EntidadBancaria entidadBancaria) {
-        return this.entidadBancariaDAO.update(entidadBancaria);
+        return entidadBancariaDAO.update(entidadBancaria);
     }
 
     @Override
     public boolean delete(int id) {
-        return this.entidadBancariaDAO.delete(id);
+        return entidadBancariaDAO.delete(id);
     }
 
     @Override
     public List<EntidadBancaria> findAll() {
-        return this.entidadBancariaDAO.findAll();
+        return entidadBancariaDAO.findAll();
     }
 
     @Override
     public List<EntidadBancaria> findByNombre(String nombre) {
-        return this.entidadBancariaDAO.findByNombre(nombre);
+        return entidadBancariaDAO.findByNombre(nombre);
     }
 
 }

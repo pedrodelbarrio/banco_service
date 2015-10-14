@@ -1,4 +1,4 @@
-package com.fpmislata.banco.persistence.dao.impl.jdbc;
+package com.fpmislata.banco_service.persistence.dao.impl.jdbc;
 
 import java.sql.Connection;
 import javax.naming.Context;

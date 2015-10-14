@@ -1,6 +1,6 @@
-package com.fpmislata.banco.persistence.dao;
+package com.fpmislata.banco_service.persistence.dao;
 
-import com.fpmislata.banco.business.domain.EntidadBancaria;
+import com.fpmislata.banco_service.business.domain.EntidadBancaria;
 import java.util.List;
 
 /**

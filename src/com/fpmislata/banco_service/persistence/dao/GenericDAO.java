@@ -1,4 +1,4 @@
-package com.fpmislata.banco.business.service;
+package com.fpmislata.banco_service.persistence.dao;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import java.util.List;
  *
  * @author PEDRO DEL BARRIO
  */
-public interface GenericService<T> {
+public interface GenericDAO<T> {
 
     T get(int id);
 

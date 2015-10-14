@@ -1,4 +1,4 @@
-package com.fpmislata.banco.persistence.repository;
+package com.fpmislata.banco_service.persistence.repository;
 
 /**
  *
