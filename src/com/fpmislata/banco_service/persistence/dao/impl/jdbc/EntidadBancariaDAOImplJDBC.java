@@ -60,7 +60,11 @@ public class EntidadBancariaDAOImplJDBC implements EntidadBancariaDAO {
             PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             preparedStatement.setString(1, entidadBancaria.getNombre());
             preparedStatement.setString(2, entidadBancaria.getCodigoEntidad());
-            preparedStatement.setDate(3, new Date(entidadBancaria.getFechaCreacion().getTime()));
+            if (entidadBancaria.getFechaCreacion() == null) {
+                preparedStatement.setDate(3, null);
+            } else {
+                preparedStatement.setDate(3, new Date(entidadBancaria.getFechaCreacion().getTime()));
+            }
             preparedStatement.setString(4, entidadBancaria.getDireccion());
             preparedStatement.setString(5, entidadBancaria.getCIF());
             int numFilasInsertadas = preparedStatement.executeUpdate();
@@ -99,7 +103,11 @@ public class EntidadBancariaDAOImplJDBC implements EntidadBancariaDAO {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, entidadBancaria.getNombre());
             preparedStatement.setString(2, entidadBancaria.getCodigoEntidad());
-            preparedStatement.setDate(3, new Date(entidadBancaria.getFechaCreacion().getTime()));
+            if (entidadBancaria.getFechaCreacion() == null) {
+                preparedStatement.setDate(3, null);
+            } else {
+                preparedStatement.setDate(3, new Date(entidadBancaria.getFechaCreacion().getTime()));
+            }
             preparedStatement.setString(4, entidadBancaria.getDireccion());
             preparedStatement.setString(5, entidadBancaria.getCIF());
             preparedStatement.setInt(6, entidadBancaria.getIdEntidadBancaria());
