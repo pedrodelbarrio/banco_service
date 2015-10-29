@@ -17,5 +17,7 @@ public interface GenericService<T> {
     boolean delete(int id);
 
     List<T> findAll();
+    
+    T getDefault();
 
 }

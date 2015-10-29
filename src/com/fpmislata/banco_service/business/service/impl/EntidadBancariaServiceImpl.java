@@ -45,4 +45,9 @@ public class EntidadBancariaServiceImpl implements EntidadBancariaService {
         return entidadBancariaDAO.findByNombre(nombre);
     }
 
+    @Override
+    public EntidadBancaria getDefault() {
+        return new EntidadBancaria();
+    }
+
 }

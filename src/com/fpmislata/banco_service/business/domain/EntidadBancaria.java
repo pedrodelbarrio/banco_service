@@ -13,6 +13,8 @@ public class EntidadBancaria {
     private Date fechaCreacion;
 
     public EntidadBancaria() {
+        this.nombre = "hola";
+        this.fechaCreacion = new Date();
     }
 
     public EntidadBancaria(int idEntidadBancaria, String nombre, String codigoEntidad, String direccion, String CIF, Date fechaCreacion) {
