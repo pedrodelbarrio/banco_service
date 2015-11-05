@@ -12,5 +12,6 @@
     <bean class="com.fpmislata.banco_service.persistence.dao.impl.jdbc.ConnectionFactoryImplDataSource" />
     <bean class="com.fpmislata.banco_service.persistence.dao.impl.jdbc.EntidadBancariaDAOImplJDBC" />
     <bean class="com.fpmislata.banco_service.business.service.impl.EntidadBancariaServiceImpl" />
+    <bean class="com.fpmislata.banco_service.persistence.jdbc.DataSourceFactoryImpl" />
  
 </beans>

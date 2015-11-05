@@ -8,8 +8,8 @@ import java.sql.Connection;
  */
 public interface ConnectionFactory {
 
-    public Connection getConnection();
+    Connection getConnection();
 
-    public void closeConnection(Connection connection);
+    void closeConnection(Connection connection);
 
 }
