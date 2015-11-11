@@ -1,9 +1,0 @@
-INSERT INTO `banco`.`entidadbancaria` (`nombre`, `codigoEntidad`, `direccion`, `CIF`) VALUES ('entidad2', '0002', 'direccion2', 'A222');
-INSERT INTO `banco`.`entidadbancaria` (`nombre`, `codigoEntidad`, `direccion`, `CIF`) VALUES ('entidad3', '0003', 'direccion3', 'A333');
-INSERT INTO `banco`.`entidadbancaria` (`nombre`, `codigoEntidad`, `direccion`, `CIF`) VALUES ('entidad4', '0004', 'direccion4', 'A444');
-INSERT INTO `banco`.`entidadbancaria` (`nombre`, `codigoEntidad`, `direccion`, `CIF`) VALUES ('entidad5', '0005', 'direccion5', 'A555');
-INSERT INTO `banco`.`entidadbancaria` (`nombre`, `codigoEntidad`, `direccion`, `CIF`) VALUES ('entidad6', '0006', 'direccion6', 'A666');
-INSERT INTO `banco`.`entidadbancaria` (`nombre`, `codigoEntidad`, `direccion`, `CIF`) VALUES ('entidad7', '0007', 'direccion7', 'A777');
-INSERT INTO `banco`.`entidadbancaria` (`nombre`, `codigoEntidad`, `direccion`, `CIF`) VALUES ('entidad8', '0008', 'direccion8', 'A888');
-INSERT INTO `banco`.`entidadbancaria` (`nombre`, `codigoEntidad`, `direccion`, `CIF`) VALUES ('entidad9', '0009', 'direccion9', 'A999');
-INSERT INTO `banco`.`entidadbancaria` (`nombre`, `codigoEntidad`, `direccion`, `CIF`) VALUES ('entidad10', '0010', 'direccion10', 'A100');
