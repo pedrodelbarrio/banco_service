@@ -9,7 +9,7 @@ import com.fpmislata.banco_service.business.domain.Usuario;
 public class AuthorizationImplDummy implements Authorization {
 
     @Override
-    public boolean isAuthorizedURL(Usuario usuario, String url) {
+    public boolean isAuthorizedURL(Usuario usuario, String url, String metodo) {
         return true;
     }
 

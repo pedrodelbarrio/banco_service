@@ -8,5 +8,5 @@ public interface PasswordManager {
 
     String encrypt(String plain);
 
-    String check(String plain, String encrypted);
+    boolean check(String plain, String encrypted);
 }
