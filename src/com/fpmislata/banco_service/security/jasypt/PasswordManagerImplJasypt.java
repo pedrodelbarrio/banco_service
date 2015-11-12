@@ -18,11 +18,7 @@ public class PasswordManagerImplJasypt implements PasswordManager {
 
     @Override
     public boolean check(String plain, String encrypted) {
-        if (strongPasswordEncryptor.checkPassword(plain, encrypted)) {
-            return true;
-        } else {
-            return false;
-        }
+        return strongPasswordEncryptor.checkPassword(plain, encrypted);
     }
 
 }
