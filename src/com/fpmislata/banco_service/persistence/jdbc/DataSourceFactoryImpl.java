@@ -15,7 +15,7 @@ public class DataSourceFactoryImpl implements DataSourceFactory {
         try {
             InitialContext initCtx = new InitialContext();
             Context envCtx = (Context) initCtx.lookup("java:comp/env");
-            DataSource dataSource = (DataSource) envCtx.lookup("jdbc/MySQLDS");
+            DataSource dataSource = (DataSource) envCtx.lookup("jdbc/banco");
             initCtx.close();
             
             return dataSource;

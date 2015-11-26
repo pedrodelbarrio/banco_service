@@ -2,7 +2,10 @@ package com.fpmislata.banco_service.business.service.impl;
 
 import com.fpmislata.banco_service.business.domain.EntidadBancaria;
 import com.fpmislata.banco_service.business.service.EntidadBancariaService;
+import com.fpmislata.banco_service.core.BusinessException;
+import com.fpmislata.banco_service.core.BusinessMessage;
 import com.fpmislata.banco_service.persistence.dao.EntidadBancariaDAO;
+import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -21,8 +24,20 @@ public class EntidadBancariaServiceImpl implements EntidadBancariaService {
     }
 
     @Override
-    public EntidadBancaria insert(EntidadBancaria entidadBancaria) {
-        return entidadBancariaDAO.insert(entidadBancaria);
+    public EntidadBancaria insert(EntidadBancaria entidadBancaria) throws BusinessException {
+
+        List<BusinessMessage> businessMessages = new ArrayList<>();
+
+        if (entidadBancaria.getCodigoEntidad() == null) {
+            businessMessages.add(new BusinessMessage("El campo codigo no puede estar vacio", "Codigo"));
+        }
+
+        if (businessMessages.isEmpty()) {
+            return entidadBancariaDAO.insert(entidadBancaria);
+        } else {
+            throw new BusinessException(businessMessages);
+        }
+
     }
 
     @Override
