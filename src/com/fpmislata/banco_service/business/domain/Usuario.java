@@ -11,7 +11,6 @@ public class Usuario {
     private Rol rol;
 
     public Usuario() {
-
     }
 
     public Usuario(int idUsuario, String nombre, String encryptedPassword, Rol rol) {

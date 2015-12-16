@@ -171,7 +171,7 @@ public class EntidadBancariaDAOImplJDBC implements EntidadBancariaDAO {
                 entidadBancaria.setIdEntidadBancaria(resultSet.getInt(1));
                 entidadBancaria.setNombre(resultSet.getString(2));
                 entidadBancaria.setCodigoEntidad(resultSet.getString(3));
-                entidadBancaria.setFechaCreacion(resultSet.getDate(4));
+                entidadBancaria.setFechaCreacion(new java.util.Date(resultSet.getDate(4).getTime()));
                 entidadBancaria.setDireccion(resultSet.getString(5));
                 entidadBancaria.setCIF(resultSet.getString(6));
                 entidadesBancarias.add(entidadBancaria);

@@ -1,12 +1,13 @@
 package com.fpmislata.banco_service.business.domain;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  *
  * @author PEDRO DEL BARRIO
  */
-public class EntidadBancaria {
+public class EntidadBancaria implements Serializable {
 
     private int idEntidadBancaria;
     private String nombre, codigoEntidad, direccion, CIF;
